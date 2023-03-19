@@ -2,7 +2,7 @@ package fooddelivery.domain;
 
 import fooddelivery.domain.OrderedToStroe;
 import fooddelivery.domain.AcceptOrdered;
-import fooddelivery.domain.CancelOrdered;
+import fooddelivery.domain.RejectOrdered;
 import fooddelivery.StoreApplication;
 import javax.persistence.*;
 import java.util.List;
@@ -98,10 +98,10 @@ public class Store  {
         // it is NOT A GOOD PRACTICE. instead, Event-Policy mapping is recommended.
 
 
-        fooddelivery.external.Store store = new fooddelivery.external.Store();
+        fooddelivery.external.OrderStatus orderStatus = new fooddelivery.external.OrderStatus();
         // mappings goes here
-        StoreApplication.applicationContext.getBean(fooddelivery.external.StoreService.class)
-            .cancelOrder(store);
+        StoreApplication.applicationContext.getBean(fooddelivery.external.OrderStatusService.class)
+            .rejectOrder(orderStatus);
 
 
         OrderedToStroe orderedToStroe = new OrderedToStroe(this);
@@ -114,8 +114,18 @@ public class Store  {
 
 
 
-        CancelOrdered cancelOrdered = new CancelOrdered(this);
-        cancelOrdered.publishAfterCommit();
+        RejectOrdered rejectOrdered = new RejectOrdered(this);
+        rejectOrdered.publishAfterCommit();
+
+        // Get request from OrderStatus
+        //fooddelivery.external.OrderStatus orderStatus =
+        //    Application.applicationContext.getBean(fooddelivery.external.OrderStatusService.class)
+        //    .getOrderStatus(/** mapping value needed */);
+
+        // Get request from OrderStatus
+        //fooddelivery.external.OrderStatus orderStatus =
+        //    Application.applicationContext.getBean(fooddelivery.external.OrderStatusService.class)
+        //    .getOrderStatus(/** mapping value needed */);
 
     }
 

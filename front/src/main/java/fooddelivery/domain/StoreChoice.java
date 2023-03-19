@@ -42,6 +42,11 @@ public class StoreChoice  {
         StoreChoosed storeChoosed = new StoreChoosed(this);
         storeChoosed.publishAfterCommit();
 
+        // Get request from OrderStatus
+        //fooddelivery.external.OrderStatus orderStatus =
+        //    Application.applicationContext.getBean(fooddelivery.external.OrderStatusService.class)
+        //    .getOrderStatus(/** mapping value needed */);
+
     }
 
     public static StoreChoiceRepository repository(){

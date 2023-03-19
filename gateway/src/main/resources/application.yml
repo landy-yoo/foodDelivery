@@ -11,7 +11,7 @@ spring:
         - id: front
           uri: http://localhost:8081
           predicates:
-            - Path=/menuChoices/**, /storeChoices/**, /deliveryStatuses/**
+            - Path=/menuChoices/**, /storeChoices/**, /orderStatuses/**
         - id: customer
           uri: http://localhost:8082
           predicates:
@@ -50,7 +50,7 @@ spring:
         - id: front
           uri: http://front:8080
           predicates:
-            - Path=/menuChoices/**, /storeChoices/**, /deliveryStatuses/**
+            - Path=/menuChoices/**, /storeChoices/**, /orderStatuses/**
         - id: customer
           uri: http://customer:8080
           predicates:

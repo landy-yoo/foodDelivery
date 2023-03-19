@@ -7,14 +7,14 @@ import lombok.*;
 
 @Data
 @ToString
-public class CancelOrdered extends AbstractEvent {
+public class RejectOrdered extends AbstractEvent {
 
     private Long id;
 
-    public CancelOrdered(Store aggregate){
+    public RejectOrdered(Store aggregate){
         super(aggregate);
     }
-    public CancelOrdered(){
+    public RejectOrdered(){
         super();
     }
 }

@@ -2,7 +2,7 @@
 
     <v-card outlined>
         <v-card-title>
-            DeliveryStatus # {{$route.params.id }}
+            OrderStatus # {{$route.params.id }}
         </v-card-title>
 
         <v-card-text>
@@ -25,49 +25,43 @@
                 <String label="MenuName" v-model="item.menuName" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="MenuPirce" v-model="item.menuPirce" :editMode="editMode" @change="change" />
-            </div>
-            <div>
-                <Boolean label="StartCookYn" v-model="item.startCookYn" :editMode="editMode" @change="change" />
-            </div>
-            <div>
-                <Boolean label="PayCancelYn" v-model="item.payCancelYn" :editMode="editMode" @change="change" />
-            </div>
-            <div>
-                <Boolean label="OrderCancelYn" v-model="item.orderCancelYn" :editMode="editMode" @change="change" />
-            </div>
-            <div>
-                <Boolean label="DeliveryYn" v-model="item.deliveryYn" :editMode="editMode" @change="change" />
+                <String label="MenuPrice" v-model="item.menuPrice" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Date label="OrderDt" v-model="item.orderDt" :editMode="editMode" @change="change" />
             </div>
             <div>
+                <Date label="CancelOrderDt" v-model="item.cancelOrderDt" :editMode="editMode" @change="change" />
+            </div>
+            <div>
                 <Date label="PayDt" v-model="item.payDt" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="PayAcceptId" v-model="item.payAcceptId" :editMode="editMode" @change="change" />
-            </div>
-            <div>
-                <Date label="StartCookDt" v-model="item.startCookDt" :editMode="editMode" @change="change" />
-            </div>
-            <div>
-                <Date label="StartDeliveryDt" v-model="item.startDeliveryDt" :editMode="editMode" @change="change" />
-            </div>
-            <div>
-                <Date label="OrderCancelDt" v-model="item.orderCancelDt" :editMode="editMode" @change="change" />
-            </div>
-            <div>
-                <Date label="OrderToStoreDt" v-model="item.orderToStoreDt" :editMode="editMode" @change="change" />
+                <Date label="CancelPayDt" v-model="item.cancelPayDt" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Date label="AcceptOrderDt" v-model="item.acceptOrderDt" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Date label="CancelStoreDt" v-model="item.cancelStoreDt" :editMode="editMode" @change="change" />
+                <Date label="RejectOrderDt" v-model="item.rejectOrderDt" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="PayVanNo" v-model="item.payVanNo" :editMode="editMode" @change="change" />
+                <Date label="StartCookDt" v-model="item.startCookDt" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Date label="FinishCookDt" v-model="item.finishCookDt" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="VanAccpteNo" v-model="item.vanAccpteNo" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="VanCancelNo" v-model="item.vanCancelNo" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Date label="RiderPickDt" v-model="item.riderPickDt" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Date label="FinishDeliveryDt" v-model="item.finishDeliveryDt" :editMode="editMode" @change="change" />
             </div>
         </v-card-text>
     </v-card>
@@ -78,7 +72,7 @@
   const axios = require('axios').default;
 
   export default {
-    name: 'DeliveryStatusViewDetail',
+    name: 'OrderStatusViewDetail',
     props: {
       value: Object,
     },
@@ -87,7 +81,7 @@
     }),
     async created() {
       var params = this.$route.params;
-      var temp = await axios.get(axios.fixUrl('/deliveryStatuses/' + params.id))
+      var temp = await axios.get(axios.fixUrl('/orderStatuses/' + params.id))
 
       this.item = temp.data;
 

@@ -10,8 +10,8 @@ import MenuChoiceDetail from "./components/listers/MenuChoiceDetail"
 import StoreChoiceManager from "./components/listers/StoreChoiceCards"
 import StoreChoiceDetail from "./components/listers/StoreChoiceDetail"
 
-import DeliveryStatusView from "./components/DeliveryStatusView"
-import DeliveryStatusViewDetail from "./components/DeliveryStatusViewDetail"
+import OrderStatusView from "./components/OrderStatusView"
+import OrderStatusViewDetail from "./components/OrderStatusViewDetail"
 import PayManager from "./components/listers/PayCards"
 import PayDetail from "./components/listers/PayDetail"
 
@@ -48,14 +48,14 @@ export default new Router({
             },
 
             {
-                path: '/deliveryStatuses',
-                name: 'DeliveryStatusView',
-                component: DeliveryStatusView
+                path: '/orderStatuses',
+                name: 'OrderStatusView',
+                component: OrderStatusView
             },
             {
-                path: '/deliveryStatuses/:id',
-                name: 'DeliveryStatusViewDetail',
-                component: DeliveryStatusViewDetail
+                path: '/orderStatuses/:id',
+                name: 'OrderStatusViewDetail',
+                component: OrderStatusViewDetail
             },
             {
                 path: '/pays',

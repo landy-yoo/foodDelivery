@@ -90,6 +90,16 @@ public class Pay  {
         OrderCanceled orderCanceled = new OrderCanceled(this);
         orderCanceled.publishAfterCommit();
 
+        // Get request from OrderStatus
+        //fooddelivery.external.OrderStatus orderStatus =
+        //    Application.applicationContext.getBean(fooddelivery.external.OrderStatusService.class)
+        //    .getOrderStatus(/** mapping value needed */);
+
+        // Get request from OrderStatus
+        //fooddelivery.external.OrderStatus orderStatus =
+        //    Application.applicationContext.getBean(fooddelivery.external.OrderStatusService.class)
+        //    .getOrderStatus(/** mapping value needed */);
+
     }
 
     public static PayRepository repository(){

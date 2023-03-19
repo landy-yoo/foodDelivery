@@ -6,9 +6,9 @@ import java.util.Date;
 import lombok.Data;
 
 @Entity
-@Table(name="DeliveryStatus_table")
+@Table(name="OrderStatus_table")
 @Data
-public class DeliveryStatus {
+public class OrderStatus {
 
         @Id
         //@GeneratedValue(strategy=GenerationType.AUTO)
@@ -19,21 +19,19 @@ public class DeliveryStatus {
         private String storeName;
         private String menuId;
         private String menuName;
-        private String menuPirce;
-        private Boolean startCookYn;
-        private Boolean payCancelYn;
-        private Boolean orderCancelYn;
-        private Boolean deliveryYn;
+        private String menuPrice;
         private Date orderDt;
+        private Date cancelOrderDt;
         private Date payDt;
-        private String payAcceptId;
-        private Date startCookDt;
-        private Date startDeliveryDt;
-        private Date orderCancelDt;
-        private Date orderToStoreDt;
+        private Date cancelPayDt;
         private Date acceptOrderDt;
-        private Date cancelStoreDt;
-        private String payVanNo;
+        private Date rejectOrderDt;
+        private Date startCookDt;
+        private Date finishCookDt;
+        private String vanAccpteNo;
+        private String vanCancelNo;
+        private Date riderPickDt;
+        private Date finishDeliveryDt;
 
 
 }

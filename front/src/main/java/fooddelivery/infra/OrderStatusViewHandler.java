@@ -12,11 +12,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class DeliveryStatusViewHandler {
+public class OrderStatusViewHandler {
 
 
     @Autowired
-    private DeliveryStatusRepository deliveryStatusRepository;
+    private OrderStatusRepository orderStatusRepository;
 
 
 

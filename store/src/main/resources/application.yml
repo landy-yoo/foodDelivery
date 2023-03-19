@@ -42,7 +42,6 @@ logging:
 api:
   url:
     front: front:8081
-    store: store:8083
 
 
 server:
@@ -77,6 +76,5 @@ spring:
 api:
   url:
     front: front:8080
-    store: store:8080
 
 
