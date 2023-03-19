@@ -23,18 +23,11 @@ public class PolicyHandler{
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString){}
 
-    @Autowired
-    fooddelivery.external.DeliveryStatusService deliveryStatusService;
-
     @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='Menuchoosed'")
     public void wheneverMenuchoosed_MenuChoice(@Payload Menuchoosed menuchoosed){
 
         Menuchoosed event = menuchoosed;
         System.out.println("\n\n##### listener MenuChoice : " + menuchoosed + "\n\n");
-
-        // REST Request Sample
-        
-        // deliveryStatusService.getDeliveryStatus(/** mapping value needed */);
 
 
         

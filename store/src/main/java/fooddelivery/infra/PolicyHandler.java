@@ -23,18 +23,11 @@ public class PolicyHandler{
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString){}
 
-    @Autowired
-    fooddelivery.external.DeliveryStatusService deliveryStatusService;
-
     @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='Payed'")
     public void wheneverPayed_Pay(@Payload Payed payed){
 
         Payed event = payed;
         System.out.println("\n\n##### listener Pay : " + payed + "\n\n");
-
-        // REST Request Sample
-        
-        // deliveryStatusService.getDeliveryStatus(/** mapping value needed */);
 
 
         
