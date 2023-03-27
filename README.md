@@ -5,7 +5,8 @@
 1. Saga (Pub/Sub)
 ![image](https://github.com/landy-yoo/foodDelivery/blob/main/food_delivery_DDD3.png)
 
-
+2. CQRS
+![image](https://github.com/landy-yoo/foodDelivery/blob/main/CQRS.PNG)
 
 
 # 예제 - 음식배달
