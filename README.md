@@ -2,14 +2,15 @@
 
 ![image](https://user-images.githubusercontent.com/487999/79708354-29074a80-82fa-11ea-80df-0db3962fb453.png)
 
-1. Saga (Pub/Sub)
+# 1. Saga (Pub/Sub)
 ![image](https://github.com/landy-yoo/foodDelivery/blob/main/food_delivery_DDD3.png)
 
-2. CQRS
+# 2. CQRS
 ![image](https://github.com/landy-yoo/foodDelivery/blob/main/CQRS.PNG)
 ![image](https://github.com/landy-yoo/foodDelivery/blob/main/CQRS_2.PNG)
 
-3. 3.Compensation/Correlation
+
+# 3. Compensation/Correlation
 ![image](https://github.com/landy-yoo/foodDelivery/blob/main/rorrelation.PNG)
 
 # 예제 - 음식배달
