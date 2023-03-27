@@ -3,7 +3,7 @@
 ![image](https://user-images.githubusercontent.com/487999/79708354-29074a80-82fa-11ea-80df-0db3962fb453.png)
 
 1. Saga (Pub/Sub)
-![image]([https://github.com/landy-yoo/foodDelivery/blob/main/food_delivery_DDD3.png](https://github.com/landy-yoo/foodDelivery/blob/main/food_delivery_DDD3.png))
+![image](https://github.com/landy-yoo/foodDelivery/blob/main/food_delivery_DDD3.png)
 
 
 
