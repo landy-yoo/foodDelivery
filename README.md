@@ -7,6 +7,7 @@
 
 2. CQRS
 ![image](https://github.com/landy-yoo/foodDelivery/blob/main/CQRS.PNG)
+![image](https://github.com/landy-yoo/foodDelivery/blob/main/CQRS_2.PNG)
 
 
 # 예제 - 음식배달
