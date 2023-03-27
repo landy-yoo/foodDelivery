@@ -9,6 +9,8 @@
 ![image](https://github.com/landy-yoo/foodDelivery/blob/main/CQRS.PNG)
 ![image](https://github.com/landy-yoo/foodDelivery/blob/main/CQRS_2.PNG)
 
+3. 3.Compensation/Correlation
+![image](https://github.com/landy-yoo/foodDelivery/blob/main/rorrelation.PNG)
 
 # 예제 - 음식배달
 
